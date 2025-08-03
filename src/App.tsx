@@ -130,10 +130,13 @@ const theme = createTheme({
 });
 
 function App() {
+  // Set basename for GitHub Pages deployment, empty for local development
+  const basename = import.meta.env.DEV ? '' : '/education-website';
+  
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <Router basename={basename}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
