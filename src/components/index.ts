@@ -1,0 +1,9 @@
+export { default as Navbar } from './Navbar';
+export { default as AboutSection } from './AboutSection';
+export { default as StudentTestimonials } from './StudentTestimonials';
+export { default as AchievementGallery } from './AchievementGallery';
+export { default as CoursesSection } from './CoursesSection';
+export { default as OurTeamSection } from './OurTeamSection';
+export { default as FAQSection } from './FAQSection';
+export { default as Footer } from './Footer';
+export { default as ScrollToTop } from './ScrollToTop'; 
