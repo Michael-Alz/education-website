@@ -20,28 +20,53 @@ const FAQSection: React.FC = () => {
   const faqItems: FAQItem[] = [
     {
       id: 1,
-      question: "What age groups do you serve?",
-      answer: "We provide educational services for students from middle school through college level (ages 12-22). Our programs are specifically designed to meet the unique learning needs of each age group, with specialized approaches for SAT/ACT preparation, college applications, and academic subject tutoring."
+      question: "What types of academic courses do you offer?",
+      answer: "We offer tutoring and academic support for AP, IB, and A-Level courses in Math, Physics, Chemistry, Biology, and Statistics."
     },
     {
       id: 2,
-      question: "How do I schedule a consultation or first session?",
-      answer: "Getting started is easy! You can contact us through our website contact form, call us at (555) 123-4567, or send us an email at info@eduexcellence.com. We offer a free 30-minute consultation to discuss your academic goals and determine the best program for your needs."
+      question: "Do you provide SAT and ACT preparation courses?",
+      answer: "Yes, we provide comprehensive SAT and ACT preparation programs, including diagnostic testing, strategy coaching, and personalized study plans."
     },
     {
       id: 3,
-      question: "What are your class sizes and tutoring options?",
-      answer: "We offer both small group classes (maximum 6 students) and one-on-one tutoring sessions. Our small group classes provide collaborative learning opportunities while maintaining personalized attention. Private tutoring offers completely customized instruction tailored to individual learning styles and pace."
+      question: "What is the difference between AP, IB, and A-Level courses?",
+      answer: "AP (Advanced Placement) is a U.S.-based curriculum offering college-level courses in high school. IB (International Baccalaureate) is a globally recognized program with a broader, inquiry-based curriculum. A-Level is a UK-based system focused on subject specialization. We provide support for all three systems."
     },
     {
       id: 4,
-      question: "How much improvement can I expect in my test scores?",
-      answer: "While results vary by individual, our students typically see significant improvements. On average, SAT scores improve by 180+ points and ACT scores increase by 4+ points. Many of our students achieve their target scores within 12-16 weeks of consistent preparation with our proven methods."
+      question: "Can students get help with homework or exam preparation only?",
+      answer: "Yes. We offer flexible tutoring options, including regular sessions, last-minute homework help, and intensive test preparation."
     },
     {
       id: 5,
-      question: "Do you offer online or in-person classes?",
-      answer: "We offer both online and in-person instruction options to accommodate different preferences and schedules. Our online platform provides interactive whiteboards, screen sharing, and recorded sessions for review. In-person classes are held at our modern learning center with state-of-the-art facilities."
+      question: "Do you offer college admissions consulting services?",
+      answer: "Yes, we provide U.S. college admissions guidance, including application strategy, school selection, essay coaching, interview preparation, and more."
+    },
+    {
+      id: 6,
+      question: "When should students start preparing for U.S. college applications?",
+      answer: "Ideally, students should begin planning in Grade 10 or 11 to build a strong academic and extracurricular profile. However, we also support students with later start dates."
+    },
+    {
+      id: 7,
+      question: "Is the college admissions service only for U.S. universities?",
+      answer: "Our primary focus is U.S. universities, but we also provide limited guidance for UK, Canada, and other international applications upon request."
+    },
+    {
+      id: 8,
+      question: "Are your sessions online or in-person?",
+      answer: "We offer both online and in-person tutoring, depending on the student's location and preference."
+    },
+    {
+      id: 9,
+      question: "How do we get started?",
+      answer: "Contact us through our website to schedule a free consultation. We'll assess your needs and recommend a customized learning or admissions plan."
+    },
+    {
+      id: 10,
+      question: "Do you provide practice materials and mock tests for SAT and AP exams?",
+      answer: "Yes. We offer extensive practice with real past exam questions for SAT and AP subjects. Students also gain access to professional online platforms for adaptive mock testing and performance tracking."
     }
   ];
 
@@ -204,7 +229,7 @@ const FAQSection: React.FC = () => {
             color="primary.main"
             sx={{ fontWeight: 'bold' }}
           >
-            Contact us at info@eduexcellence.com or (555) 123-4567
+            Contact us at info@eduexcellence.com or +1 (562)-968-4306 (US)
           </Typography>
         </Box>
       </Container>

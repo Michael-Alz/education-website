@@ -3,6 +3,8 @@ interface Course {
   id: string;
   title: string;
   description: string;
+  detailedDescription?: string;
+  currentSchedule?: string;
   image: string;
   duration: string;
   level: string;

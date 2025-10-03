@@ -1,0 +1,14 @@
+{
+  "../components/SlickClient.tsx -> react-slick": {
+    "id": "../components/SlickClient.tsx -> react-slick",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js"
+    ]
+  },
+  "components/StudentVideoTestimonials.tsx -> react-slick": {
+    "id": "components/StudentVideoTestimonials.tsx -> react-slick",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_react-slick_lib_index_js.js"
+    ]
+  }
+}

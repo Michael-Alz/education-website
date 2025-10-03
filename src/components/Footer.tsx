@@ -13,7 +13,6 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import SchoolIcon from '@mui/icons-material/School';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -47,9 +46,9 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <Box>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-              <SchoolIcon sx={{ mr: 1, fontSize: 32 }} />
+              <Box component="img" src="/favicon/icon_2.png" alt="Logo" sx={{ mr: 1, width: 32, height: 32, borderRadius: 1 }} />
               <Typography variant="h5" component="div" fontWeight="bold">
-                EduExcellence
+                STH Education Solutions
               </Typography>
             </Box>
             <Typography variant="body1" paragraph sx={{ mb: 3, lineHeight: 1.6 }}>
@@ -122,7 +121,7 @@ const Footer: React.FC = () => {
                     Phone
                   </Typography>
                   <Typography variant="body1">
-                    (555) 123-4567
+                    +1 (562)-968-4306 (US)
                   </Typography>
                 </Box>
               </Box>
@@ -134,8 +133,8 @@ const Footer: React.FC = () => {
                     Address
                   </Typography>
                   <Typography variant="body1">
-                    123 Education Street<br />
-                    Learning City, LC 12345
+                    23107 Catalina Harbor CT<br />
+                    Katy, TX 77494, USA
                   </Typography>
                 </Box>
               </Box>
@@ -172,12 +171,24 @@ const Footer: React.FC = () => {
               <Typography variant="h6" component="h4" fontWeight="bold" gutterBottom>
                 WeChat
               </Typography>
-              <Typography variant="body2" color="grey.400">
+              <Typography variant="body2" color="grey.400" sx={{ mb: 2 }}>
                 Scan QR code or add:
               </Typography>
-              <Typography variant="body1" fontWeight="bold">
-                EduExcellence2024
+              <Typography variant="body1" fontWeight="bold" sx={{ mb: 2 }}>
+                KevinLiu_ED
               </Typography>
+              <Box 
+                component="img" 
+                src="/wechat/qr_code.jpg" 
+                alt="WeChat QR Code"
+                sx={{ 
+                  width: 120, 
+                  height: 120, 
+                  borderRadius: 1,
+                  border: '2px solid #fff',
+                  boxShadow: 2
+                }}
+              />
             </Box>
           </Box>
         </Box>
@@ -195,7 +206,7 @@ const Footer: React.FC = () => {
           }}
         >
           <Typography variant="body2" color="grey.400">
-            © {currentYear} EduExcellence. All rights reserved.
+            © {currentYear} STH Education Solutions. All rights reserved.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3 }}>
             <Typography 

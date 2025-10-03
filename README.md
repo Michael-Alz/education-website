@@ -1,119 +1,143 @@
-# EduExcellence - Educational Services Website
+# Personal Webpage - STH Education Solutions
 
-A modern, responsive React-based frontend for an educational services website built with Material UI (MUI) components and styling.
+A modern educational services website built with Next.js (App Router), React 19, TypeScript 5, and Material UI 5. The site showcases programs, achievements, articles, and team members, with smooth in-page navigation and static export for deployment.
 
-## 🚀 Features
+## Tech Stack
+- Framework: Next.js (App Router, Server + Client Components)
+- Language: TypeScript 5, React 19
+- UI: Material UI (MUI) v5, Emotion
+- Carousel: react-slick + slick-carousel
+- ORM/DB: Prisma + PostgreSQL
+- Linting: ESLint 9
+- Build Output: Static export (`output: 'export'`) for GitHub Pages
 
-- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design using Material UI components
-- **Interactive Elements**: Smooth scrolling navigation, hover effects, and animated testimonials
-- **Carousel Gallery**: Horizontally sliding achievement showcase using react-slick
-- **Component-Based Architecture**: Modular, reusable React components
+## Key Features
+- Full-bleed hero with transparent-to-solid navbar on scroll
+- Hash-based in-page navigation (About, Testimonials, Achievements, Courses, Our Team, FAQ, Contact)
+- Articles listing and detail pages (`/article`, `/article/[articleId]`)
+- Course detail pages with optional price, detailed description, and current schedule
+- Our Team section with responsive teacher cards
+- Static generation for articles and courses (`generateStaticParams`)
 
-## 📋 Components
+## Environments
+- Development: root at `http://localhost:3000` (no basePath)
+- Production: `basePath` and `assetPrefix` set to `/education-website` (GitHub Pages)
 
-### 1. Navbar
-- Responsive navigation bar with logo and section links
-- Mobile-friendly hamburger menu
-- Smooth scroll-to-section functionality
-- Built with MUI AppBar, Toolbar, and Menu components
+Configure via environment variables in `.env`:
+```
+DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/DB
+NODE_ENV=development
+```
 
-### 2. AboutSection
-- Personal and company introduction
-- Two-column layout with founder info and mission statement
-- Professional card-based design with icons
+## Directory Structure
+```
+app/
+  globals.css              # Global styles (scroll padding, slick fixes)
+  layout.tsx               # Root layout with MUI theme registry
+  page.tsx                 # Homepage with hero + sections
+  article/
+    page.tsx               # Articles listing (SSG)
+    [articleId]/page.tsx   # Article detail (SSG)
+  courses/
+    [courseId]/page.tsx    # Course detail (SSG)
+  not-found.tsx
 
-### 3. StudentTestimonials
-- Student feedback display with ratings
-- Fade-in animations for enhanced user experience
-- Grid layout with hover effects
-- Star ratings and student avatars
+src/
+  components/
+    AboutSection.tsx
+    AchievementGallery.tsx # react-slick carousel with custom MUI arrows
+    CoursesSection.tsx     # Course cards grid (price optional)
+    FAQSection.tsx
+    Footer.tsx
+    Navbar.tsx             # Transparent → solid on scroll, mobile menu
+    OurTeamSection.tsx
+    ScrollToTop.tsx
+    StudentTestimonials.tsx
+  data/
+    getCourses.ts          # Prisma access, UI mapping (null → undefined)
+    courses.ts             # Legacy sample data (not used in production)
+  lib/
+    prisma.ts              # Prisma client singleton
+  theme/
+    ThemeRegistry.tsx      # MUI theme, CssBaseline overrides, layout wrapper
 
-### 4. AchievementGallery
-- Horizontally sliding carousel showcasing statistics
-- Auto-play functionality with custom navigation arrows
-- Responsive breakpoints for different screen sizes
-- Color-coded achievement cards
+prisma/
+  schema.prisma            # Prisma schema (Course.price is optional)
+  seed.ts                  # Seed script for Articles and Courses
 
-### 5. CoursesSection
-- Course offerings in a responsive grid layout
-- Detailed course information with pricing
-- Feature tags and call-to-action buttons
-- Hover animations and color-coded categories
+public/
+  background/background.jpg# Homepage hero background image
+  favicon/icon_1.png       # Favicon
+  favicon/icon_2.png       # Navbar/branding logo
+```
 
-### 6. Footer
-- Comprehensive contact information
-- Social media links with hover effects
-- Quick navigation links
-- Company branding and copyright information
-
-## 🛠️ Technologies Used
-
-- **React 19**: Modern React with functional components and hooks
-- **TypeScript**: Type-safe development
-- **Material UI (MUI)**: Complete component library and theming system
-- **React Slick**: Carousel/slider functionality
-- **Vite**: Fast build tool and development server
-- **CSS-in-JS**: Emotion styling with MUI's sx prop
-
-## 📦 Dependencies
-
-```json
-{
-  "@mui/material": "Material UI core components",
-  "@emotion/react": "CSS-in-JS library",
-  "@emotion/styled": "Styled components for MUI",
-  "@mui/icons-material": "Material Design icons",
-  "react-slick": "Carousel component",
-  "slick-carousel": "Slick carousel styles"
+## Data Model (Prisma)
+```
+model Course {
+  id                   String  @id     // slug
+  title                String
+  description          String
+  detailedDescription  String?
+  currentSchedule      String?
+  imageUrl             String?
+  duration             String
+  level                String
+  price                String? // optional
+  features             String[]
+  color                String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
 }
 ```
 
-## 🚀 Getting Started
+## Development
+Install dependencies and start the dev server:
+```
+npm install
+npm run dev
+```
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Database setup (after editing `prisma/schema.prisma`):
+```
+npm run db:generate   # regenerate Prisma client
+npm run db:push       # push schema to DB
+npm run db:seed       # seed sample data
+```
 
-2. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+## Scripts
+```
+npm run dev           # Next.js dev server
+npm run build         # Build for production (static export)
+npm run start         # Preview production build
+npm run lint          # Lint codebase
+npm run db:generate   # prisma generate
+npm run db:push       # prisma db push
+npm run db:seed       # seed database
+```
 
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
+## Routing & SSG
+- Dynamic routes: `/article/[articleId]`, `/courses/[courseId]`
+- `generateStaticParams` used to export static pages for all IDs
+- `dynamic = 'force-static'` ensures static generation
 
-## 🎨 Design Features
+## UI Notes
+- Navbar: transparent over hero; transitions to `#1976d2` with shadow after scrolling ~80px
+- Colors and spacing follow MUI theme in `ThemeRegistry.tsx`
+- Slick arrows use MUI `IconButton` with default slick arrow pseudo-elements suppressed in `globals.css`
 
-- **Custom Theme**: Consistent color palette and typography
-- **Smooth Animations**: Hover effects, fade-ins, and transforms
-- **Visual Hierarchy**: Proper spacing, typography scale, and color contrast
-- **Modern Cards**: Rounded corners and subtle shadows
-- **Icon Integration**: Meaningful icons throughout the interface
+## Deployment (GitHub Pages)
+- Project is configured for static export with a production base path `/education-website`
+- Build and export:
+```
+npm run build
+```
+- Deploy the `out/` directory to GitHub Pages (or any static host)
 
-## 📱 Responsive Breakpoints
+## Troubleshooting
+- Prisma field errors after schema changes: regenerate client and push schema
+```
+npm run db:generate && npm run db:push && npm run db:seed
+```
+- Duplicate scrollbars: ensured `overflow` is not set on `html/body/#root`; see `ThemeRegistry.tsx`
+- Carousel arrow white stripe: suppressed slick `:before` glyphs in `globals.css`
 
-- **Desktop**: 1200px+ (3-column layouts)
-- **Tablet**: 600px-1199px (2-column layouts)
-- **Mobile**: <600px (single-column layouts)
-
-## 🎯 Key Features
-
-- **Accessibility**: Proper ARIA labels and semantic HTML
-- **Performance**: Optimized components and lazy loading considerations
-- **SEO-Friendly**: Semantic structure and proper heading hierarchy
-- **Cross-Browser**: Compatible with modern browsers
-
-## 📞 Mock Contact Information
-
-- **Email**: info@eduexcellence.com
-- **Phone**: (555) 123-4567
-- **Address**: 123 Education Street, Learning City, LC 12345
-- **WeChat**: EduExcellence2024
-
----
-
-Built with ❤️ using React, TypeScript, and Material UI

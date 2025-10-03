@@ -76,16 +76,7 @@ const AboutSection: React.FC = () => {
                 </Typography>
               </Box>
               <Typography variant="body1" paragraph>
-                With over 15 years of experience in education, our founder Sarah Chen 
-                has dedicated her career to helping students achieve their academic goals. 
-                Holding a Master's degree in Education and multiple teaching certifications, 
-                she has guided thousands of students to success.
-              </Typography>
-              <Typography variant="body1" paragraph>
-                Sarah's personalized approach to learning ensures that each student 
-                receives the individual attention they need to thrive. Her passion for 
-                education and proven track record make her one of the most sought-after 
-                educators in the region.
+              Our educational philosophy is shaped by the leadership of Mr. Kevin Liu, an accomplished educator based in Houston, Texas. With extensive experience in teaching mathematics, physics, and chemistry, Mr. Liu offers deep expertise in both U.S. and U.K. secondary science curricula. Over the years, he has guided hundreds of students to outstanding results in AP, IB, SAT, and ACT examinations—many achieving perfect scores under his mentorship.
               </Typography>
             </CardContent>
           </Card>
@@ -103,20 +94,9 @@ const AboutSection: React.FC = () => {
                 </Typography>
               </Box>
               <Typography variant="body1" paragraph>
-                EduExcellence was founded with a simple yet powerful mission: to provide 
-                world-class educational services that unlock every student's potential. 
-                We believe that quality education should be accessible, engaging, and 
-                tailored to individual learning styles.
+              Founded in 2021, our company is committed to delivering exceptional academic support to middle and high school students worldwide. We focus on three core areas: comprehensive after-school tutoring across all high school subjects (including AP, IB, and A-Level curricula), standardized test preparation (SAT, ACT, GRE, TOEFL, IELTS, SSAT, and ISEE), and expert guidance for college and graduate school admissions in the United States and Canada.
               </Typography>
-              <Typography variant="body1" paragraph>
-                Our comprehensive approach combines traditional teaching methods with 
-                innovative educational technologies, creating an environment where 
-                students not only learn but also develop a lifelong love for knowledge.
-              </Typography>
-              <Typography variant="body1">
-                We are committed to academic excellence, character development, and 
-                preparing students for success in an ever-changing world.
-              </Typography>
+
             </CardContent>
           </Card>
         </Box>

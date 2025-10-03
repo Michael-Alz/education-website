@@ -1,0 +1,37 @@
+/* Global styles migrated for Next App Router */
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+html, body { height: 100%; }
+
+/* Preserve smooth scroll and scroll padding for fixed navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+/* Remove margin-top so hero sits under transparent AppBar */
+body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure the main content area starts below navbar */
+#__next {
+  margin-top: 0;
+}
+
+/* Hide default slick arrow glyphs to prevent white stripe */
+.slick-prev:before,
+.slick-next:before {
+  content: '' !important;
+  opacity: 0 !important;
+}
+
+@media (max-width: 600px) {
+  html { scroll-padding-top: 56px; }
+  body { 
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
