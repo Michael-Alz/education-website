@@ -37,7 +37,7 @@ export default function Page() {
               fontWeight: 800, 
               fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
               color: '#fff',
-              textShadow: '0 2px 8px rgba(0,0,0,0.5)',
+              textShadow: '0.5px 0.5px 2.5px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)',
               lineHeight: 1.1
             }}
           >
@@ -49,7 +49,7 @@ export default function Page() {
               mt: 2, 
               fontSize: { xs: '1rem', sm: '1.2rem', md: '1.4rem', lg: '1.6rem' },
               color: '#fff',
-              textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+              textShadow: '0.5px 0.5px 2.5px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.6)',
               lineHeight: 1.3
             }}
           >

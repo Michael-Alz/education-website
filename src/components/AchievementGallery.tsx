@@ -6,65 +6,90 @@ import {
   CardContent,
   Box,
   IconButton,
+  CardMedia,
 } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import SchoolIcon from '@mui/icons-material/School';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import Slider from '../../components/SlickClient';
 
 interface Achievement {
   id: number;
   title: string;
-  description: string;
-  stat: string;
-  icon: React.ReactNode;
-  color: string;
+  imagePath: string;
 }
 
 const AchievementGallery: React.FC = () => {
   const achievements: Achievement[] = [
     {
       id: 1,
-      title: "Students Accepted to Top Universities",
-      description: "Our students have been accepted to prestigious institutions including Harvard, MIT, Stanford, and UC Berkeley.",
-      stat: "95%",
-      icon: <SchoolIcon sx={{ fontSize: 48 }} />,
-      color: '#1976d2'
+      title: "Student Achievement Score 1",
+      imagePath: "/scores/Picture1.jpg"
     },
     {
       id: 2,
-      title: "Average SAT Score Improvement",
-      description: "Students see significant improvements in their standardized test scores with our targeted preparation programs.",
-      stat: "+180",
-      icon: <TrendingUpIcon sx={{ fontSize: 48 }} />,
-      color: '#388e3c'
+      title: "Student Achievement Score 2",
+      imagePath: "/scores/Picture2.png"
     },
     {
       id: 3,
-      title: "Academic Excellence Awards",
-      description: "Our students have won numerous academic competitions and received recognition for their outstanding achievements.",
-      stat: "200+",
-      icon: <EmojiEventsIcon sx={{ fontSize: 48 }} />,
-      color: '#f57c00'
+      title: "Student Achievement Score 3",
+      imagePath: "/scores/Picture3.jpg"
     },
     {
       id: 4,
-      title: "Students Served Successfully",
-      description: "Over the years, we have helped thousands of students achieve their academic goals and reach their full potential.",
-      stat: "1000+",
-      icon: <SchoolIcon sx={{ fontSize: 48 }} />,
-      color: '#7b1fa2'
+      title: "Student Achievement Score 4",
+      imagePath: "/scores/Picture4.png"
     },
     {
       id: 5,
-      title: "Years of Educational Excellence",
-      description: "With over a decade of experience, we continue to evolve our teaching methods to serve students better.",
-      stat: "15+",
-      icon: <EmojiEventsIcon sx={{ fontSize: 48 }} />,
-      color: '#d32f2f'
+      title: "Student Achievement Score 5",
+      imagePath: "/scores/Picture5.jpg"
+    },
+    {
+      id: 6,
+      title: "Student Achievement Score 6",
+      imagePath: "/scores/Picture6.jpg"
+    },
+    {
+      id: 7,
+      title: "Student Achievement Score 7",
+      imagePath: "/scores/Picture7.png"
+    },
+    {
+      id: 8,
+      title: "Student Achievement Score 8",
+      imagePath: "/scores/Picture8.jpg"
+    },
+    {
+      id: 9,
+      title: "Student Achievement Score 9",
+      imagePath: "/scores/Picture9.jpg"
+    },
+    {
+      id: 10,
+      title: "Student Achievement Score 10",
+      imagePath: "/scores/Picture10.png"
+    },
+    {
+      id: 11,
+      title: "Student Achievement Score 11",
+      imagePath: "/scores/Picture11.png"
+    },
+    {
+      id: 12,
+      title: "Student Achievement Score 12",
+      imagePath: "/scores/Picture12.png"
+    },
+    {
+      id: 13,
+      title: "Student Achievement Score 13",
+      imagePath: "/scores/Picture13.png"
+    },
+    {
+      id: 14,
+      title: "Student Achievement Score 14",
+      imagePath: "/scores/Picture14.png"
     }
   ];
 
@@ -163,20 +188,13 @@ const AchievementGallery: React.FC = () => {
             {achievements.map((achievement) => (
               <Box key={achievement.id} sx={{ px: 2 }}>
                 <Card sx={{ height: 300, display: 'flex', flexDirection: 'column', textAlign: 'center', '&:hover': { transform: 'scale(1.05)', transition: 'transform 0.3s ease-in-out', boxShadow: 4 } }}>
-                  <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                    <Box sx={{ color: achievement.color, mb: 2, display: 'flex', justifyContent: 'center' }}>
-                      {achievement.icon}
-                    </Box>
-                    <Typography variant="h3" component="div" fontWeight="bold" sx={{ color: achievement.color, mb: 1 }}>
-                      {achievement.stat}
-                    </Typography>
-                    <Typography variant="h6" component="div" fontWeight="bold" gutterBottom>
-                      {achievement.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.4 }}>
-                      {achievement.description}
-                    </Typography>
-                  </CardContent>
+                  <CardMedia
+                    component="img"
+                    height="350"
+                    image={achievement.imagePath}
+                    alt={achievement.title}
+                    sx={{ objectFit: 'contain', objectPosition: 'center' }}
+                  />
                 </Card>
               </Box>
             ))}
