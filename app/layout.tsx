@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ThemeRegistry from '../src/theme/ThemeRegistry';
+import FloatingContact from '../src/components/FloatingContact';
 
 export const metadata: Metadata = {
   title: 'STH Education Solutions - Educational Services',
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <ThemeRegistry>
           {children}
+          <FloatingContact />
         </ThemeRegistry>
       </body>
     </html>
