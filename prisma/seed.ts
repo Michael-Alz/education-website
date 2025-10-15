@@ -131,7 +131,7 @@ async function main() {
       description:
         'Foundational chemical principles, problem-solving, and lab skills geared to AP exam success. Clear explanations and targeted practice.',
       detailedDescription: `AP Chemistry covers fundamental chemical principles including atomic structure, reactions, and thermodynamics. Our tutoring deepens conceptual understanding and prepares students for the AP exam.\n\nKey Contents\n• Atomic Structure and Periodicity – Electron configuration, periodic trends.\n• Chemical Bonding – Ionic, covalent, metallic bonds, and molecular geometry.\n• Stoichiometry – Mole concept, balancing equations, limiting reactants.\n• Thermochemistry – Energy changes, enthalpy, Hess’s law.\n• Kinetics – Reaction rates, rate laws, factors affecting rates.\n• Chemical Equilibrium – Le Chatelier’s principle, equilibrium constants.\n• Acids and Bases – pH, strength, titrations, buffers.\n• Electrochemistry – Redox reactions, galvanic cells.\n• Laboratory Skills – Experimental design, data analysis, and safety.`,
-      imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80',
       duration: 'Ongoing',
       level: 'High School',
       features: ['Stoichiometry', 'Equilibrium', 'Kinetics', 'Lab Skills'],
@@ -167,7 +167,7 @@ async function main() {
       description:
         'Atomic theory to organic chemistry with labs and data analysis. Clear explanations and exam-focused practice.',
       detailedDescription: `A-level Chemistry explores structure, properties, and reactions of matter with practical applications. Our tutoring emphasizes understanding, problem-solving, and lab technique.\n\nKey Contents\n• Atomic Structure and the Periodic Table – Electron configuration, periodic trends.\n• Bonding and Structure – Ionic, covalent, metallic, and molecular geometry.\n• Stoichiometry – Moles, molar calculations, empirical formulas.\n• Energetics – Enthalpy changes, Hess’s law, calorimetry.\n• Kinetics – Reaction rates and rate equations.\n• Equilibrium – Dynamic equilibrium and Le Chatelier’s principle.\n• Acids and Bases – pH, strengths, titration curves.\n• Redox & Electrochemistry – Oxidation states, redox equations, cells.\n• Organic Chemistry – Hydrocarbons, functional groups, mechanisms, spectroscopy.\n• Transition Metals & Inorganic – Properties and reactions of transition elements.\n• Practical Skills – Techniques, data analysis, error evaluation.`,
-      imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80',
       duration: 'Ongoing',
       level: 'A-level',
       features: ['Stoichiometry', 'Organic', 'Electrochemistry', 'Lab Skills'],
@@ -203,7 +203,7 @@ async function main() {
       description:
         'Atomic theory to organic chemistry with lab technique and IA support for IB HL/SL.',
       detailedDescription: `IB Chemistry HL and SL cover essential chemical principles from atomic theory to organic chemistry, with HL including advanced topics.\n\nKey Contents\n• Stoichiometric Relationships – Formulas, equations, mole concept.\n• Atomic Structure – Electron configurations and isotopes.\n• Periodicity – Trends and properties.\n• Bonding and Structure – Ionic, covalent, metallic, IMF.\n• Energetics/Thermochemistry – Enthalpy changes and calculations.\n• Kinetics – Rates and factors.\n• Equilibrium – Dynamic equilibrium, Le Chatelier.\n• Acids and Bases – pH, strength, titrations.\n• Redox Processes – Oxidation-reduction and electrochemistry.\n• Organic Chemistry – Functional groups, mechanisms (HL).\n• Measurement and Data – Experimental techniques and analysis.`,
-      imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+      imageUrl: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80',
       duration: 'Ongoing',
       level: 'IB HL/SL',
       features: ['Stoichiometry', 'Organic', 'Equilibrium', 'IA Support'],

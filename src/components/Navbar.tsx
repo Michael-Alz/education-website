@@ -58,9 +58,14 @@ const Navbar: React.FC = () => {
         position="fixed"
         elevation={scrolled ? 4 : 0}
         sx={{ 
-          backgroundColor: scrolled ? '#1976d2' : 'transparent',
+          backgroundColor: scrolled ? '#1976d2' : 'rgba(0,0,0,0.1)',
+          backdropFilter: scrolled ? 'none' : 'blur(8px)',
+          border: scrolled ? 'none' : '1px solid rgba(255,255,255,0.02)',
+          borderRadius: scrolled ? 0 : '12px',
+          margin: scrolled ? 0 : { xs: 1, sm: 2 },
+          boxShadow: scrolled ? 4 : '0 8px 32px rgba(0,0,0,0.05)',
           color: '#fff',
-          transition: 'background-color 250ms ease, box-shadow 250ms ease, color 250ms ease',
+          transition: 'background-color 250ms ease, box-shadow 250ms ease, color 250ms ease, backdrop-filter 250ms ease, border 250ms ease, border-radius 250ms ease, margin 250ms ease',
           top: 0, 
           left: 0, 
           right: 0,
