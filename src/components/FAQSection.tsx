@@ -229,7 +229,7 @@ const FAQSection: React.FC = () => {
             color="primary.main"
             sx={{ fontWeight: 'bold' }}
           >
-            Contact us at info@eduexcellence.com or +1 (562)-968-4306 (US)
+            Contact us at anqingllf@gmail.com or +1 (562)-968-4306 (US)
           </Typography>
         </Box>
       </Container>

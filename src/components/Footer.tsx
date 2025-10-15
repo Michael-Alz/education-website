@@ -9,10 +9,7 @@ import {
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -58,40 +55,28 @@ const Footer: React.FC = () => {
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <IconButton 
+                component="a"
+                href="mailto:anqingllf@gmail.com"
                 sx={{ 
                   color: 'white',
-                  '&:hover': { bgcolor: '#3b5998' }
+                  '&:hover': { bgcolor: '#db4437' }
                 }}
-                aria-label="Facebook"
+                aria-label="Gmail"
               >
-                <FacebookIcon />
+                <EmailIcon />
               </IconButton>
               <IconButton 
+                component="a"
+                href="https://wa.me/15629684306"
+                target="_blank"
+                rel="noopener noreferrer"
                 sx={{ 
                   color: 'white',
-                  '&:hover': { bgcolor: '#1da1f2' }
+                  '&:hover': { bgcolor: '#25d366' }
                 }}
-                aria-label="Twitter"
+                aria-label="WhatsApp"
               >
-                <TwitterIcon />
-              </IconButton>
-              <IconButton 
-                sx={{ 
-                  color: 'white',
-                  '&:hover': { bgcolor: '#0077b5' }
-                }}
-                aria-label="LinkedIn"
-              >
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton 
-                sx={{ 
-                  color: 'white',
-                  '&:hover': { bgcolor: '#e4405f' }
-                }}
-                aria-label="Instagram"
-              >
-                <InstagramIcon />
+                <WhatsAppIcon />
               </IconButton>
             </Box>
           </Box>
@@ -109,7 +94,7 @@ const Footer: React.FC = () => {
                     Email
                   </Typography>
                   <Typography variant="body1">
-                    info@eduexcellence.com
+                    anqingllf@gmail.com
                   </Typography>
                 </Box>
               </Box>

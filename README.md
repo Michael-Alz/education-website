@@ -196,5 +196,5 @@ npm run db:generate && npm run db:push && npm run db:seed
 - **Phone:** +1 (562)-968-4306 (US)
 - **Address:** 23107 Catalina Harbor CT, Katy, TX 77494, USA
 - **WeChat:** KevinLiu_ED (QR code available on website)
-- **Email:** info@eduexcellence.com
+- **Email:** anqingllf@gmail.com
 
